@@ -1,0 +1,23 @@
+{% extends "base.html.j2" %}
+
+{% block head %}
+<style>
+	body {
+		text-align: center;
+		background: var(--black)
+	}
+</style>
+{% endblock %}
+
+{% block body %}
+<p>
+	<img src="{{ g.load_static('images/404.png') }}">
+	<br>
+	404
+	<br>
+	The page you were looking for doesn't exist.
+	<br>
+	<br>
+	<a href="/">Back to Home</a>
+</p>
+{% endblock%}

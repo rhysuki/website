@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{% set decoration = "☆" %}
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="{{ decoration }} {{ self.title() }} - nikki's kennel {{ decoration }}">
+
+	<link rel="shortcut icon" href="{{ g.load_static('images/icons/star_pink.png') }}" type="image/x-icon">
+	<link href="{{ g.load_static('style.css') }}" rel="stylesheet" type="text/css" media="all">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="{{ g.load_static('fairy_dust2.js') }}"></script>
+	<title>{{ decoration }} {% block title %}{% endblock %} - nikki's kennel {{ decoration }}</title>
+
+	{% block head %}{% endblock %}
+</head>
+
+<body>
+	{% block body %}{% endblock %}
+</body>

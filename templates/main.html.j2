@@ -1,0 +1,99 @@
+{% extends "/base.html.j2" %}
+
+{% block title%}{{ title }}{% endblock %}
+
+{% block body %}
+<header>
+	<a href="html/home.html" target="frame">
+		<img src="{{ g.load_static('images/logo.png') }}">
+	</a>
+</header>
+
+<main>
+	<nav>
+		<h2>Navigation</h2>
+
+		<h3>This</h3>
+		<ul>
+			<li><a href="/about/"><img src="{{ g.load_static('images/icons/question.png') }}">
+					About</a></li>
+			<li><a href="/credits/"><img src="{{ g.load_static('images/icons/person.png') }}">
+					Credits</a></li>
+			<li><a href="/links/"><img src="{{ g.load_static('images/icons/link.png') }}">
+					Links</a></li>
+			<li><a href="/link_to_me/"><img src="{{ g.load_static('images/icons/heart.png') }}">
+					Link to me!</a>
+			</li>
+		</ul>
+
+		<h3>Journal</h3>
+		<ul>
+			<li><a href="https://crouton.net"><img src="{{ g.load_static('images/icons/clock.png') }}">
+					Recent Entries</a> </li>
+			<li><a href="https://crouton.net"><img src="{{ g.load_static('images/icons/book.png') }}">
+					Archive</a></li>
+			<li><a href="https://crouton.net"><img src="{{ g.load_static('images/icons/paintbrush.gif') }}"> Tagged:
+					Art</a></li>
+			<li><a href="https://crouton.net"><img src="{{ g.load_static('images/icons/monitor.gif') }}"> Tagged:
+					Dev</a> </li>
+		</ul>
+
+		<h3>More</h3>
+		<ul>
+			<li><a href="/resources/"><img src="{{ g.load_static('images/icons/info.png') }}">
+					Resources</a></li>
+			<li><a href="/other_sites/"><img src="{{ g.load_static('images/icons/critter.gif') }}">
+					Other Sites</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="content">
+		{{ content }}
+	</div>
+
+	<aside>
+		<img src="{{ g.load_static('images/nier.gif') }}">
+		<hr>
+		<p>hi i'm <b>nikki</b> aka <b>rhy</b>, a sleepy trans girl from brazil!</p>
+		<p>
+			she/her, 20s. i like art, coding, gamedev, design, writing and media analysis.
+			<br>
+			i'm also a dog.
+			<br>
+			<img src="{{ g.load_static('images/icons/star_pink.png') }}"><img
+				src="{{ g.load_static('images/icons/brazil.gif') }}"><img
+				src="{{ g.load_static('images/icons/paw.png') }}">
+		</p>
+
+		<img src="{{ g.load_static('images/88x31/trans.gif') }}" title="trans pride">
+		<img src="{{ g.load_static('images/88x31/vim.gif') }}" title="Edited with Vim">
+		<a href="https://vidapon.net/" target="_blank"><img src="{{ g.load_static('images/88x31/rainworld.gif') }}"
+				title="Rain World (by vidapon)"></a>
+		<img src="{{ g.load_static('images/88x31/bi.gif') }}" title="bi pride">
+		<img src="{{ g.load_static('images/88x31/nier.gif') }}" title="furry girls pls">
+		<a href="https://vidapon.net/" target="_blank"><img src="{{ g.load_static('images/88x31/necrodancer.gif') }}"
+				title="Crypt of the NecroDancer (by vidapon)"></a>
+		<a href="https://vidapon.net/" target="_blank"><img src="{{ g.load_static('images/88x31/hollowknight.gif') }}"
+				title="Hollow Knight (by vidapon)"></a>
+		<img src="{{ g.load_static('images/88x31/boo.gif') }}" title="booooo - i'm shy ok?">
+
+		<hr>
+		<hr>
+		<hr>
+		<p>
+			last updated:
+			<br>
+			nov. 11, 2024
+		</p>
+	</aside>
+</main>
+
+<span class="container"></span>
+<footer>
+	<a href="https://cinni.net/" target="_blank" style="text-decoration: none;">
+		🜏 this site was modified from https://cinni.net/ 🜏
+		<!-- ☾ ⋆˖⁺‧₊☽◯☾₊‧⁺˖⋆🜏♡ ⁺‧₊˚ ⋆˚₊‧⁺ -->
+	</a>
+</footer>
+{% endblock %}
