@@ -8,8 +8,13 @@
 
 {% block body %}
 <header>
-	<a href="html/home.html" target="frame">
-		<img src="{{ g.load_static('images/logo.png') }}">
+	<a style="" href="html/home.html">
+		<img class="color-bg" style="position: absolute; left: 86px;"
+			src="{{ g.load_static('images/logo_layer_bg.png') }}">
+		<img class="color-alt" style="position: absolute; left: 86px;"
+			src="{{ g.load_static('images/logo_layer_alt.png') }}">
+		<img class="color-main" style="position: absolute; left: 86px;"
+			src="{{ g.load_static('images/logo_layer_main.png') }}">
 	</a>
 </header>
 
@@ -19,34 +24,37 @@
 
 		<h3>This</h3>
 		<ul>
-			<li><a href="/about/"><img src="{{ g.load_static('images/icons/question.png') }}">
+			<li><a href="/about/"><img class="color-alt" src="{{ g.load_static('images/icons/question.png') }}">
 					About</a></li>
-			<li><a href="/credits/"><img src="{{ g.load_static('images/icons/person.png') }}">
+			<li><a href="/credits/"><img class="color-alt" src="{{ g.load_static('images/icons/person.png') }}">
 					Credits</a></li>
-			<li><a href="/links/"><img src="{{ g.load_static('images/icons/link.png') }}">
+			<li><a href="/links/"><img class="color-alt" src="{{ g.load_static('images/icons/link.png') }}">
 					Links</a></li>
-			<li><a href="/link_to_me/"><img src="{{ g.load_static('images/icons/heart.png') }}">
+			<li><a href="/link_to_me/"><img class="color-alt" src="{{ g.load_static('images/icons/heart.png') }}">
 					Link to me!</a>
 			</li>
 		</ul>
 
 		<h3>Journal</h3>
 		<ul>
-			<li><a href="https://crouton.net"><img src="{{ g.load_static('images/icons/clock.png') }}">
+			<li><a href="https://crouton.net"><img class="color-alt"
+						src="{{ g.load_static('images/icons/clock.png') }}">
 					Recent Entries</a> </li>
-			<li><a href="https://crouton.net"><img src="{{ g.load_static('images/icons/book.png') }}">
+			<li><a href="https://crouton.net"><img class="color-alt" src="{{ g.load_static('images/icons/book.png') }}">
 					Archive</a></li>
-			<li><a href="https://crouton.net"><img src="{{ g.load_static('images/icons/paintbrush.gif') }}"> Tagged:
+			<li><a href="https://crouton.net"><img class="color-alt"
+						src="{{ g.load_static('images/icons/paintbrush.gif') }}"> Tagged:
 					Art</a></li>
-			<li><a href="https://crouton.net"><img src="{{ g.load_static('images/icons/monitor.gif') }}"> Tagged:
+			<li><a href="https://crouton.net"><img class="color-alt"
+						src="{{ g.load_static('images/icons/monitor.gif') }}"> Tagged:
 					Dev</a> </li>
 		</ul>
 
 		<h3>More</h3>
 		<ul>
-			<li><a href="/resources/"><img src="{{ g.load_static('images/icons/info.png') }}">
+			<li><a href="/resources/"><img class="color-alt" src="{{ g.load_static('images/icons/info.png') }}">
 					Resources</a></li>
-			<li><a href="/other_sites/"><img src="{{ g.load_static('images/icons/critter.gif') }}">
+			<li><a href="/other_sites/"><img class="color-alt" src="{{ g.load_static('images/icons/critter.gif') }}">
 					Other Sites</a>
 			</li>
 		</ul>
@@ -69,6 +77,12 @@
 				<input type="checkbox" id="readable-font" name="readable-font" />
 				<label for="readable-font">Readable Font</label>
 			</li>
+
+			<li style="text-align: center;">
+				<button class="toggle" onclick="toggleTheme();window.location.reload();">
+					Toggle Theme
+				</button>
+			</li>
 		</ul>
 	</nav>
 
@@ -77,7 +91,7 @@
 	</div>
 
 	<aside>
-		<img src="{{ g.load_static('images/nier.gif') }}">
+		<img class="color-main" src="{{ g.load_static('images/nier.gif') }}">
 		<hr>
 		<p>hi i'm <b>nikki</b> aka <b>rhy</b>, a sleepy trans girl from brazil!</p>
 		<p>
@@ -85,9 +99,9 @@
 			<br>
 			i'm also a dog.
 			<br>
-			<img src="{{ g.load_static('images/icons/star_pink.png') }}">
-			<img src="{{ g.load_static('images/icons/brazil.gif') }}">
-			<img src="{{ g.load_static('images/icons/paw.png') }}">
+			<img class="color-main" src="{{ g.load_static('images/icons/star_pink.png') }}">
+			<img class="color-main" src="{{ g.load_static('images/icons/brazil.gif') }}">
+			<img class="color-main" src="{{ g.load_static('images/icons/paw.png') }}">
 		</p>
 
 		<img src="{{ g.load_static('images/88x31/trans.gif') }}" title="trans pride">

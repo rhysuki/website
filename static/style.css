@@ -13,26 +13,26 @@ blue: #5f9eff
 
 	/* Huge thank you to angel-rs for the color filter generator.
 	https://angel-rs.github.io/css-color-filter-generator/ */
-	/* Red */
 	--color-filter-main: brightness(0) saturate(100%) invert(54%) sepia(13%) saturate(5810%) hue-rotate(317deg) brightness(112%) contrast(101%);
-	/* Blue */
 	--color-filter-alt: brightness(0) saturate(100%) invert(54%) sepia(69%) saturate(1170%) hue-rotate(193deg) brightness(100%) contrast(103%);
-	/* Black */
 	--color-filter-bg: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(541%) hue-rotate(187deg) brightness(101%) contrast(95%);
 
-	--bg: var(--color-bg);
-	--text: var(--color-main);
-	--border: url('images/border-img.png');
-	--bgimg: url('images/bg-pattern.png');
+	--border: url('images/border_dark.png');
+	--bgimg: url('images/bg_dark.png');
 }
 
 [data-theme="light"] {
-	--bg: peachpuff;
-	--text: lightseagreen;
-	--link: orchid;
-	--imood: url('images/imood.gif');
-	--border: url('https://evilcinni.neocities.org/img/site/border-img-reverse.png');
-	--bgimg: url('https://evilcinni.neocities.org/img/site/bg-pattern-reverse.png');
+	--color-main: #d454a6;
+	--color-main-dark: #faccff;
+	--color-alt: #1db0bd;
+	--color-bg: #f0f6e8;
+
+	--color-filter-main: brightness(0) saturate(100%) invert(47%) sepia(90%) saturate(549%) hue-rotate(280deg) brightness(86%) contrast(92%);
+	--color-filter-alt: brightness(0) saturate(100%) invert(55%) sepia(91%) saturate(374%) hue-rotate(136deg) brightness(88%) contrast(97%);
+	--color-filter-bg: brightness(0) saturate(100%) invert(92%) sepia(19%) saturate(155%) hue-rotate(55deg) brightness(106%) contrast(93%);
+
+	--border: url('images/border_light.png');
+	--bgimg: url('images/bg_light.png');
 }
 
 
@@ -54,7 +54,7 @@ blue: #5f9eff
 
 * {
 	box-sizing: border-box;
-	scrollbar-color: var(--color-main) var(--bg);
+	scrollbar-color: var(--color-main) var(--color-bg);
 	scrollbar-width: thin;
 }
 
@@ -63,8 +63,8 @@ blue: #5f9eff
 }
 
 body {
-	color: var(--text);
-	background: var(--bg);
+	color: var(--color-main);
+	background: var(--color-bg);
 	background-image: var(--bgimg);
 	font-family: 'tiny', "ＭＳ Ｐゴシック", verdana;
 	font-size: 16px;
@@ -84,7 +84,7 @@ header {
 }
 
 main {
-	background: var(--bg);
+	background: var(--color-bg);
 	display: flex;
 	flex-wrap: wrap;
 	border: 5px solid;
@@ -93,7 +93,7 @@ main {
 
 footer {
 	font-family: 'ＭＳ Ｐゴシック';
-	background: var(--bg);
+	background: var(--color-bg);
 	padding: 5px;
 	text-align: center;
 	border: 5px solid;
@@ -163,11 +163,13 @@ h6 {
 h1:before {
 	content: url('images/icons/star.png');
 	padding-right: 5px;
+	filter: var(--color-filter-alt);
 }
 
 h1:after {
 	content: url('images/icons/star.png');
 	padding-left: 5px;
+	filter: var(--color-filter-alt);
 }
 
 header h1 {
@@ -215,11 +217,13 @@ h3 {
 h3:before {
 	content: url('images/icons/star.png');
 	padding-right: 5px;
+	filter: var(--color-filter-alt);
 }
 
 h3:after {
 	content: url('images/icons/star.png');
 	padding-left: 5px;
+	filter: var(--color-filter-alt);
 }
 
 nav h3 {
@@ -238,7 +242,7 @@ a:hover {
 
 
 hr {
-	color: var(--text);
+	color: var(--color-main);
 	border: none;
 	border-bottom: 1px dotted;
 }
@@ -255,7 +259,7 @@ audio {
 
 ul {
 	list-style-type: "₊‧⁺˖⋆ ";
-	color: var(--text);
+	color: var(--color-main);
 	margin: 0;
 	padding: 0 5px;
 	margin: 10px 50px;
@@ -269,17 +273,13 @@ li {
 	padding: 2px 5px;
 }
 
-/* li::before {
-	content: "✿ ";
-} */
-
 button {
 	font-family: 'basiic';
 	font-size: 1rem;
 	padding: 0 2px;
 	margin: 0;
-	background: var(--bg);
-	color: var(--text);
+	background: var(--color-bg);
+	color: var(--color-main);
 	border: 1px solid;
 }
 
@@ -303,7 +303,7 @@ button:hover {
 }
 
 .index {
-	background: var(--bg);
+	background: var(--color-bg);
 	background-image: var(--bgimg);
 	padding: 0;
 	margin: 0;
