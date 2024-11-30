@@ -1,5 +1,5 @@
 from flask import Flask, g, request, render_template, url_for, make_response
-import markdown
+import markdown # type: ignore
 
 app = Flask(__name__)
 
