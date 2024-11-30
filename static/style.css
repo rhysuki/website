@@ -6,19 +6,22 @@ blue: #5f9eff
 
 :root,
 [data-theme="dark"] {
-	--test: #00ff00;
-	--black: #18191c;
-	--red: #ff6c7e;
-	--red-alt: #4d2c30;
-	--blue: #5f9eff;
+	--color-main: #ff6c7e;
+	--color-main-dark: #4d2c30;
+	--color-alt: #5f9eff;
+	--color-bg: #18191c;
 
-	--bg: var(--black);
-	--text: var(--red);
-	--link: var(--red-alt);
-	--accent: var(--red-alt);
-	--imood: url('images/imood.gif');
-	--filter: none;
-	--audiofilter: sepia(100%) hue-rotate(295deg) saturate(600%) contrast(55%) brightness(260%);
+	/* Huge thank you to angel-rs for the color filter generator.
+	https://angel-rs.github.io/css-color-filter-generator/ */
+	/* Red */
+	--color-filter-main: brightness(0) saturate(100%) invert(54%) sepia(13%) saturate(5810%) hue-rotate(317deg) brightness(112%) contrast(101%);
+	/* Blue */
+	--color-filter-alt: brightness(0) saturate(100%) invert(54%) sepia(69%) saturate(1170%) hue-rotate(193deg) brightness(100%) contrast(103%);
+	/* Black */
+	--color-filter-bg: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(541%) hue-rotate(187deg) brightness(101%) contrast(95%);
+
+	--bg: var(--color-bg);
+	--text: var(--color-main);
 	--border: url('images/border-img.png');
 	--bgimg: url('images/bg-pattern.png');
 }
@@ -27,10 +30,7 @@ blue: #5f9eff
 	--bg: peachpuff;
 	--text: lightseagreen;
 	--link: orchid;
-	--accent: pink;
 	--imood: url('images/imood.gif');
-	--filter: invert(40%) hue-rotate(190deg) saturate(10);
-	--audiofilter: sepia(100%) hue-rotate(300deg) saturate(600%) contrast(60%) brightness(250%);
 	--border: url('https://evilcinni.neocities.org/img/site/border-img-reverse.png');
 	--bgimg: url('https://evilcinni.neocities.org/img/site/bg-pattern-reverse.png');
 }
@@ -54,12 +54,12 @@ blue: #5f9eff
 
 * {
 	box-sizing: border-box;
-	scrollbar-color: var(--red) var(--bg);
+	scrollbar-color: var(--color-main) var(--bg);
 	scrollbar-width: thin;
 }
 
 ::selection {
-	background: var(--accent);
+	background: var(--color-main-dark);
 }
 
 body {
@@ -163,13 +163,11 @@ h6 {
 h1:before {
 	content: url('images/icons/star.png');
 	padding-right: 5px;
-	filter: var(--filter);
 }
 
 h1:after {
 	content: url('images/icons/star.png');
 	padding-left: 5px;
-	filter: var(--filter)
 }
 
 header h1 {
@@ -217,13 +215,11 @@ h3 {
 h3:before {
 	content: url('images/icons/star.png');
 	padding-right: 5px;
-	filter: var(--filter);
 }
 
 h3:after {
 	content: url('images/icons/star.png');
 	padding-left: 5px;
-	filter: var(--filter);
 }
 
 nav h3 {
@@ -233,11 +229,11 @@ nav h3 {
 
 
 a {
-	color: var(--red);
+	color: var(--color-main);
 }
 
 a:hover {
-	color: var(--blue);
+	color: var(--color-alt);
 }
 
 
@@ -255,7 +251,6 @@ audio {
 	margin: 5px 40px;
 	border-radius: 15px;
 	height: 15px;
-	filter: var(--audiofilter);
 }
 
 ul {
@@ -293,6 +288,19 @@ button:hover {
 }
 
 /* --- */
+
+
+.color-main {
+	filter: var(--color-filter-main);
+}
+
+.color-alt {
+	filter: var(--color-filter-alt);
+}
+
+.color-bg {
+	filter: var(--color-filter-bg);
+}
 
 .index {
 	background: var(--bg);

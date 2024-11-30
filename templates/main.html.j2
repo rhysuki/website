@@ -1,6 +1,10 @@
 {% extends "/base.html.j2" %}
 
-{% block title%}{{ title }}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block head%}
+<script src="https://99gifshop.neocities.org/theme-control.js"></script>
+{% endblock %}
 
 {% block body %}
 <header>
@@ -46,6 +50,26 @@
 					Other Sites</a>
 			</li>
 		</ul>
+
+		<hr>
+		<h2>Settings</h2>
+
+		<ul>
+			<li>
+				<input type="checkbox" id="light-mode" name="light-mode" />
+				<label for="light-mode">Light Theme</label>
+			</li>
+
+			<li>
+				<input type="checkbox" id="low-movement-mode" name="low-movement-mode" />
+				<label for="low-movement-mode">Low-Movement Mode</label>
+			</li>
+
+			<li>
+				<input type="checkbox" id="readable-font" name="readable-font" />
+				<label for="readable-font">Readable Font</label>
+			</li>
+		</ul>
 	</nav>
 
 	<div id="content">
@@ -61,9 +85,9 @@
 			<br>
 			i'm also a dog.
 			<br>
-			<img src="{{ g.load_static('images/icons/star_pink.png') }}"><img
-				src="{{ g.load_static('images/icons/brazil.gif') }}"><img
-				src="{{ g.load_static('images/icons/paw.png') }}">
+			<img src="{{ g.load_static('images/icons/star_pink.png') }}">
+			<img src="{{ g.load_static('images/icons/brazil.gif') }}">
+			<img src="{{ g.load_static('images/icons/paw.png') }}">
 		</p>
 
 		<img src="{{ g.load_static('images/88x31/trans.gif') }}" title="trans pride">
