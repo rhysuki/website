@@ -3,12 +3,12 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block head%}
-<script src="https://99gifshop.neocities.org/theme-control.js"></script>
+<script src="{{ g.load_static('style_control.js') }}"></script>
 {% endblock %}
 
 {% block body %}
 <header>
-	<a style="" href="html/home.html">
+	<a style="" href="/">
 		<img class="color-bg" style="position: absolute; left: 86px;"
 			src="{{ g.load_static('images/logo_layer_bg.png') }}">
 		<img class="color-alt" style="position: absolute; left: 86px;"
@@ -63,24 +63,15 @@
 		<h2>Settings</h2>
 
 		<ul>
-			<li>
-				<input type="checkbox" id="light-mode" name="light-mode" />
-				<label for="light-mode">Light Theme</label>
-			</li>
-
-			<li>
-				<input type="checkbox" id="low-movement-mode" name="low-movement-mode" />
-				<label for="low-movement-mode">Low-Movement Mode</label>
-			</li>
-
-			<li>
-				<input type="checkbox" id="readable-font" name="readable-font" />
-				<label for="readable-font">Readable Font</label>
+			<li style="text-align: center;">
+				<button class="toggle" onclick="toggleTheme();">
+					Toggle Light Mode
+				</button>
 			</li>
 
 			<li style="text-align: center;">
-				<button class="toggle" onclick="toggleTheme();window.location.reload();">
-					Toggle Theme
+				<button class="toggle" onclick="toggleFont();">
+					Toggle Readable Font
 				</button>
 			</li>
 		</ul>
@@ -115,15 +106,6 @@
 		<a href="https://vidapon.net/" target="_blank"><img src="{{ g.load_static('images/88x31/hollowknight.gif') }}"
 				title="Hollow Knight (by vidapon)"></a>
 		<img src="{{ g.load_static('images/88x31/boo.gif') }}" title="booooo - i'm shy ok?">
-
-		<hr>
-		<hr>
-		<hr>
-		<p>
-			last updated:
-			<br>
-			nov. 11, 2024
-		</p>
 	</aside>
 </main>
 

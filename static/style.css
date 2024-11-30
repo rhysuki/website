@@ -23,7 +23,7 @@ blue: #5f9eff
 
 [data-theme="light"] {
 	--color-main: #d454a6;
-	--color-main-dark: #faccff;
+	--color-main-dark: #e9ced8;
 	--color-alt: #1db0bd;
 	--color-bg: #f0f6e8;
 
@@ -37,18 +37,18 @@ blue: #5f9eff
 
 
 @font-face {
-	font-family: 'basiic';
-	src: url('fonts/basiic.ttf');
-}
-
-@font-face {
-	font-family: 'tiny';
+	font-family: 'main';
 	src: url('fonts/basiic_sans_12pt.ttf');
 }
 
 @font-face {
-	font-family: 'title';
+	font-family: 'big';
 	src: url('fonts/basiic_style_sans.ttf');
+}
+
+@font-face {
+	font-family: 'readable';
+	src: url('fonts/Nunito.ttf')
 }
 
 
@@ -66,7 +66,7 @@ body {
 	color: var(--color-main);
 	background: var(--color-bg);
 	background-image: var(--bgimg);
-	font-family: 'tiny', "ＭＳ Ｐゴシック", verdana;
+	font-family: 'main';
 	font-size: 16px;
 	max-width: 1200px;
 	margin: auto;
@@ -92,7 +92,6 @@ main {
 }
 
 footer {
-	font-family: 'ＭＳ Ｐゴシック';
 	background: var(--color-bg);
 	padding: 5px;
 	text-align: center;
@@ -154,7 +153,7 @@ h4,
 h5,
 h6 {
 	font-size: 1rem;
-	font-family: 'title';
+	font-family: 'big';
 	padding: 5px;
 	margin: 0;
 	text-align: center;
@@ -274,7 +273,7 @@ li {
 }
 
 button {
-	font-family: 'basiic';
+	font-family: 'main';
 	font-size: 1rem;
 	padding: 0 2px;
 	margin: 0;
@@ -285,6 +284,7 @@ button {
 
 button:hover {
 	cursor: pointer;
+	color: var(--color-alt);
 }
 
 /* --- */
