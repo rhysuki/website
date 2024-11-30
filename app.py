@@ -27,6 +27,7 @@ def before_request():
 
 @app.route("/", defaults={"name": "placeholder"})
 @app.route("/about/", defaults={"name": "about"})
+@app.route("/news/", defaults={"name": "news"})
 @app.route("/credits/", defaults={"name": "credits"})
 @app.route("/links/", defaults={"name": "links"})
 @app.route("/link_to_me/", defaults={"name": "link_to_me"})
