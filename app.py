@@ -1,4 +1,5 @@
 from flask import Flask, g, request, render_template, url_for, make_response
+import markdown
 
 app = Flask(__name__)
 
@@ -15,8 +16,12 @@ def before_request():
 @app.route("/resources/", defaults={"name": "resources"})
 @app.route("/other_sites/", defaults={"name": "other_sites"})
 def main_page(name):
-	with open(f"static/main_pages/{name}.html", "r") as file:
-		return render_template("main.html.j2", title=name, content=file.read())
+	with open(f"static/main_pages/{name}.md", "r", encoding="utf-8") as file:
+		return render_template(
+			"main.html.j2",
+			title=name,
+			content=markdown.markdown(file.read())
+		)
 
 @app.errorhandler(404)
 def not_found(_):
