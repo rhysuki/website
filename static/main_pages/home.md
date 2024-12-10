@@ -3,7 +3,9 @@
 <div style="text-align: center;">
 	<img class="color-main" src="/static/images/wizard.png">
 	<br>
+	<img class="color-alt" src="/static/images/icons/pentacle.gif">
 	welcome at my site!
+	<img class="color-alt" src="/static/images/icons/pentacle.gif">
 </div>
 
 it still needs a bit of filling in, and almost every link doesn't work yet, but I hope to
@@ -21,8 +23,9 @@ goals:
 
 # Update Log
 
-**?**: Filled in most of the sidebar links with content, and moved to using markdown
-instead of pure HTML.
+**Dec 10, 2024**: Filled in most of the sidebar links with content and moved to using markdown
+instead of pure HTML. The "Link to Me" page still only has simple icons, which
+might update soon, and there's still no blog yet.
 
 **Nov 30, 2024**: added theme + font switching! this goes a long way to making the site more accessible
 to everyone. mobile mode next?

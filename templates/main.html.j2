@@ -24,10 +24,10 @@
 
 		<h3>This</h3>
 		<ul>
+			<li><a href="/"><img class="color-alt" src="{{ g.load_static('images/icons/house.png') }}">
+					Home</a></li>
 			<li><a href="/about/"><img class="color-alt" src="{{ g.load_static('images/icons/question.png') }}">
 					About</a></li>
-			<li><a href="/news/"><img class="color-alt" src="{{ g.load_static('images/icons/newspaper.png') }}">
-					News</a></li>
 			<li><a href="/credits/"><img class="color-alt" src="{{ g.load_static('images/icons/person.png') }}">
 					Credits</a></li>
 			<li><a href="/links/"><img class="color-alt" src="{{ g.load_static('images/icons/link.png') }}">
@@ -67,12 +67,14 @@
 		<ul>
 			<li style="text-align: center;">
 				<button class="toggle" onclick="toggleTheme();">
+					<img class="color-alt" src="{{ g.load_static('images/icons/moon.png') }}">
 					Toggle Light Mode
 				</button>
 			</li>
 
 			<li style="text-align: center;">
 				<button class="toggle" onclick="toggleFont();">
+					<img class="color-alt" src="{{ g.load_static('images/icons/font.png') }}">
 					Toggle Readable Font
 				</button>
 			</li>
